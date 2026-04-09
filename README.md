@@ -1,16 +1,36 @@
-# React + Vite
+🌦️ Weather App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive Weather Application built using React.js that allows users to search for any city and view real-time weather information, including current conditions, hourly forecast, and daily forecast.
 
-Currently, two official plugins are available:
+🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+🔍 Search weather by city name
+🌡️ Displays current temperature, weather condition, and wind speed
+⏰ Hourly forecast for upcoming hours
+📅 Daily forecast for next 5 days
+⚡ Loading indicator during API calls
+❌ Error handling for invalid city input
+📱 Responsive and user-friendly UI
 
-## React Compiler
+🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+⚛️ React.js
+📡 Axios
+🌐 OpenWeather API
+🎨 CSS
 
-## Expanding the ESLint configuration
+🔑 API Integration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+The application integrates external APIs to fetch weather data. It uses the Current Weather Data API to display real-time weather details and the 5-Day / 3-Hour Forecast API to generate both hourly and daily forecasts.
+
+🧠 How It Works
+
+The user enters a city name in the search box, and the application sends API requests to fetch both current weather data and forecast data.
+
+The current weather section displays temperature, weather conditions, and wind speed. The hourly forecast shows the first few upcoming records, while the daily forecast is calculated by selecting every 8th record, which represents one full day.
+
+If the entered city is invalid, the application displays an error message instead of weather data.
+
+⚠️ Error Handling
+
+If the API fails or the city is not found, the application displays a "City Not Found" message. It also clears any previously shown data to avoid confusion. When the user performs a new search, the error state is reset automatically.
