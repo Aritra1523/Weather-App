@@ -1,36 +1,77 @@
-🌦️ Weather App
+---
 
-A responsive Weather Application built using React.js that allows users to search for any city and view real-time weather information, including current conditions, hourly forecast, and daily forecast.
+## 📌 Overview
 
-🚀 Features
+A responsive Weather Application built using **React.js** that allows users to search for any city and view real-time weather information, including current conditions, hourly forecast, and daily forecast.
 
-🔍 Search weather by city name
-🌡️ Displays current temperature, weather condition, and wind speed
-⏰ Hourly forecast for upcoming hours
-📅 Daily forecast for next 5 days
-⚡ Loading indicator during API calls
-❌ Error handling for invalid city input
-📱 Responsive and user-friendly UI
+---
 
-🛠️ Tech Stack
+## 🚀 Features
 
-⚛️ React.js
-📡 Axios
-🌐 OpenWeather API
-🎨 CSS
+- 🔍 Search weather by city name  
+- 🌡️ Displays temperature, weather condition, and wind speed  
+- ⏰ Hourly forecast (next few hours)  
+- 📅 Daily forecast (next 5 days)  
+- ⚡ Loading indicator during API calls  
+- ❌ Error handling for invalid city  
+- 📱 Fully responsive UI  
+- ♻️ Custom React Hooks for clean and reusable logic  
 
-🔑 API Integration
+---
 
-The application integrates external APIs to fetch weather data. It uses the Current Weather Data API to display real-time weather details and the 5-Day / 3-Hour Forecast API to generate both hourly and daily forecasts.
+## 🛠️ Tech Stack
 
-🧠 How It Works
+- ⚛️ React.js  
+- 📡 Axios  
+- 🌐 OpenWeather API  
+- 🎨 CSS  
 
-The user enters a city name in the search box, and the application sends API requests to fetch both current weather data and forecast data.
+---
 
-The current weather section displays temperature, weather conditions, and wind speed. The hourly forecast shows the first few upcoming records, while the daily forecast is calculated by selecting every 8th record, which represents one full day.
+## 📷 Screenshots
 
-If the entered city is invalid, the application displays an error message instead of weather data.
+### 🔹 Home Page
+![Home](https://via.placeholder.com/800x400?text=Weather+App+Home)
 
-⚠️ Error Handling
+### 🔹 Weather Result
+![Result](https://via.placeholder.com/800x400?text=Weather+Result)
 
-If the API fails or the city is not found, the application displays a "City Not Found" message. It also clears any previously shown data to avoid confusion. When the user performs a new search, the error state is reset automatically.
+👉 *(Replace above links with your real screenshots)*
+
+---
+
+## 🔑 API Integration
+
+This app uses:
+- Current Weather Data API  
+- 5-Day / 3-Hour Forecast API  
+
+---
+
+## 🧠 How It Works
+
+- User enters a city name  
+- API fetches real-time data  
+- Custom Hook manages API calls & state  
+- Displays:
+  - Current weather  
+  - Hourly forecast  
+  - Daily forecast  
+
+---
+
+## ⚠️ Error Handling
+
+- Shows **"City Not Found"** if invalid input  
+- Clears previous data to avoid confusion  
+- Resets error on new search  
+
+---
+
+## 📂 Project Setup
+
+```bash
+git clone https://github.com/Aritra1523/Weather-App.git
+cd Weather-App
+npm install
+npm start
