@@ -28,18 +28,6 @@ A responsive Weather Application built using **React.js** that allows users to s
 
 ---
 
-## 📷 Screenshots
-
-### 🔹 Home Page
-![Home](https://via.placeholder.com/800x400?text=Weather+App+Home)
-
-### 🔹 Weather Result
-![Result](https://via.placeholder.com/800x400?text=Weather+Result)
-
-👉 *(Replace above links with your real screenshots)*
-
----
-
 ## 🔑 API Integration
 
 This app uses:
