@@ -1,38 +1,7 @@
-import axios from "axios";
-import React, { useEffect, useState } from "react";
-import axiosInstance from "./axiosInstance";
-import Endpoints from "./EndPoints";
-const API_KEY = import.meta.env.VITE_API_KEY;
+import useWeather from "./CusTomHook";
 const Weather = () => {
-  const [city, setCity] = useState("");
-  const [data, setData] = useState(null);
-  const [forecast, setForecast] = useState("");
-  const [loading, setLoading] = useState(false);
-  const [error, seterror] = useState(false);
-  const api = async () => {
-    if (!city) return;
+  const { city, data, forecast, loading, error, api, setCity } = useWeather();
 
-    try {
-      setLoading(true);
-      let res = await axiosInstance.get(
-        `${Endpoints.weather}?q=${city}&appid=${API_KEY}&units=metric`,
-      );
-      // Forecast
-      const res2 = await axiosInstance.get(
-        `${Endpoints.forecast}?q=${city}&appid=${API_KEY}&units=metric`,
-      );
-      setForecast(res2.data);
-      setData(res.data);
-      seterror(false)
-    } catch (err) {
-      // alert("City not found");
-      seterror(true);
-      setData(null);
-      setForecast(null);
-    } finally {
-      setLoading(false);
-    }
-  };
   return (
     <>
       <div className="container">
